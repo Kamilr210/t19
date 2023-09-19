@@ -1,0 +1,16 @@
+table, tr, td {
+    border: solid 1px grey;
+    border-collapse: collapse;
+    /*border-spacing: 1px; */
+    padding: 10px;
+    text-align: center;
+    color : rgba(165, 42, 42, 0.705);
+    
+}
+
+.btn-green {
+    color: antiquewhite;
+    margin: 10px;
+    background-color: rgb(42, 231, 42);
+    margin: 10px 30px 10px 0px;
+}

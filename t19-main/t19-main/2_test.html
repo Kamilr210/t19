@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const tekst = 'Janusz Kowalski';
+        console.log(tekst);
+
+        let tekst2 = "Janusz"
+        tekst2 += "Kowalski"
+        console.log(tekst2);
+
+        const a = 10;
+        const b = 20;
+        const teskt3 = "Zmienna a: " + a + ", zmienna b: "+ b;
+        console.log (teskt3);
+        // template strings 
+        const tekst4 = `Stała a: ${a}, stała b: ${b}`;
+        console.log(tekst4);
+        // długość stringów
+        console.log("Janusz Kowal".length);
+
+        //pobieranie znaku
+        let tekst5 = "Janusz";
+        console.log(tekst5.charAt(0)); //J
+        console.log(tekst5[0]); // J
+
+        console.log(tekst5.length); //6
+        console.log(tekst5[tekst5.lenght]); // undefinied => text[6]
+        console.log(tekst5[5]); //z
+        console.log(tekst5[tekst5.length-1 ]);//z
+
+        //zmiana wilkości liter 
+        let name = "janusz";
+        console.log(name);
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+
+        //wystawienie stringa (indexOf, lastIndexOf)
+        if(name.indexOf("nuS") !== -1) {
+            console.log("1")
+        }
+        else {
+            console.log("0")
+        }
+    
+        console.log(name.indexOf("nuS"));
+        console.log(name.indexOf("nus"));
+
+        //ciencie stringa 
+        let  websiteAddress = "http://strona.pl/plik.php";
+        console.log(websiteAddress.slice(2)); //tp://strona.pl/plik.php
+        console.log(websiteAddress.slice(websiteAddress.lastIndexOf(".")));//.php
+        console.log(websiteAddress.slice(websiteAddress.lastIndexOf(".")+1));// php
+        console.log(websiteAddress.slice(websiteAddress.lastIndexOf("/")+1));//plik.php
+        
+
+        let fileName = websiteAddress.slice(websiteAddress.lastIndexOf("/") +1);//plik.php
+        let part = fileName.split(".");
+        console.log(fileName);//plik.php
+        console.log(part[0]);//plik
+        console.log(part[1]);// php
+
+        console.log(part[1].startsWith("ph")); //true
+        console.log(part[1].startsWith("hp")); //false
+        console.log(part[1].endsWith("ph")); //true
+
+        // Funkcja substr() i substring()
+        let lastName = "Janusz";
+        let newLastName = lastName.substr(0, 1); //przestarzałe 
+        console.log(newLastName); //Janusz
+        console.log(lastName.substr(0,1)); //J
+        console.log(lastName.substr(4)); //sz
+
+        console.log(lastName.substr(0, 3)); //Jan
+
+        //split
+        const nationality = "Polska, Albania, Mołdawia, Czechy";
+        let part1 = nationality.split(", ")
+        part1.forEach(function(country){
+
+            console.log(country.substr(0, 1).toUpperCase() + country.substr(1).toLowerCase());
+        });
+
+        //zamiana  (replace)
+        tekst5 = "Janusz mieszka w poznaniu, Janusz ma 20 lat "
+
+        console.log(tekst5.replace("Janusz", "Tomasz"));
+        console.log(tekst5.replaceAll("Janusz", "Tomasz"));
+
+        //powtarzanie (repeat)
+        let str = "";
+        console.log(str);
+        str = "Janusz"
+        console.log(str.repeat(3));
+        console.log("-".repeat(20));
+
+         // wyświetlanie stringów 
+         const letters = "abcdef"
+         
+         for (let i=0; i<letters.length; i++){
+            console.log(letters[i]);
+         }
+         for (const letter of letters) {
+            console.log(letter);
+         }
+         [...letters].forEach(function(letter){
+            console.log(letter);
+         })
+         letters.split("").forEach(function(letter){
+            console.log(letter);
+         });
+         
+         console.clear();
+
+         //długość stringów 
+         console.log("a".length); //1
+         console.log("\u2614"); //parasol
+         console.log("\u2614".length);//pogotowie
+         console.log("\u1F691".length); //2
+
+         
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_table.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+        </tr>
+    </table>
+
+    <button class="btn-green">Kliknij!</button><br>
+    <button class="btn-green">Kliknij!</button>
+    
+     <div>PHP</div>
+
+    <script>
+        let btn = document.querySelector(".btn-green");
+        console.log(btn);
+
+        let btns = document.querySelector(".btn-green");
+        console.log(btns);
+
+
+        let firstCell = document.querySelector("table tr td");
+        console.log(firstCell);
+
+        let cell = document.querySelectorAll("table tr td");
+        let count = 0;
+        cell.forEach(td => {
+            count ++;
+            console.log(td,interHTML);
+    
+        });
+
+
+        
+
+        firstCell.style.backgroundColor = "#000000";
+        firstCell.style.color = "#FFFFFF";
+
+
+
+        let buttons = document.querySelectorAll("button");
+        for (let btn of buttons){
+            console.log(btn);
+        }
+  
+        buttons[1].style.color = "red";
+
+        //zmienić kolor tła wszystkich parzystych komórek w tabeli na niebieski a kolor tekstu na brązowy 
+        // wykorzystać , quertySelectorAll, foreach i funkcje strzałkową 
+    </script>
+
+</body>
+</html>
